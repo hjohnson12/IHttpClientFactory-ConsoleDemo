@@ -18,10 +18,11 @@ namespace IHttpClientFactory_ConsoleDemo
 
         public async Task<string> GetPageInformation()
         {
+            var client = _clientFactory.CreateClient();
+
             // Get some HTML content from google.com
             var request = new HttpRequestMessage(HttpMethod.Get,
                 "https://google.com");
-            var client = _clientFactory.CreateClient();
             var response = await client.SendAsync(request);
 
             if (response.IsSuccessStatusCode)

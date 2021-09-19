@@ -40,6 +40,7 @@ namespace IHttpClientFactory_ConsoleDemo
                 var stream = await response.Content.ReadAsStreamAsync();
                 response.EnsureSuccessStatusCode();
 
+                // Read from stream and deserialize json
                 using (var streamReader = new StreamReader(stream))
                 {
                     using (var jsonTextReader = new JsonTextReader(streamReader))

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,7 +7,6 @@ using System.Threading;
 using IHttpClientFactory_ConsoleDemo.Handlers;
 
 // Example program for using IHttpClientFactory 
-// 
 namespace IHttpClientFactory_ConsoleDemo
 {
     class Program
